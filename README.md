@@ -1,1 +1,1 @@
-task-tracker using React
+simple task-tracker App using React.
