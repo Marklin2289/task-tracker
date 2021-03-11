@@ -1,15 +1,9 @@
 {
   "tasks": [
     {
-      "text": "lol",
-      "day": "Weds",
-      "reminder": true,
-      "id": 5
-    },
-    {
       "text": "play games",
       "day": "Friday",
-      "reminder": true,
+      "reminder": false,
       "id": 6
     },
     {
@@ -17,6 +11,12 @@
       "day": "Thurs",
       "reminder": true,
       "id": 7
+    },
+    {
+      "text": "MERN",
+      "day": "Monday",
+      "reminder": true,
+      "id": 8
     }
   ]
 }
