@@ -31,10 +31,31 @@ function App() {
       reminder: true,
     },
   ]);
+
+  // Delete Task
+  const deleteTask = (id) => {
+    // console.log("delete", id);
+    setTasks(tasks.filter((task) => task.id !== id));
+  };
+
+  // Toggle reminder
+  const toggleReminder = (id) => {
+    // console.log(id);
+    setTasks(
+      tasks.map((task) =>
+        task.id === id ? { ...task, reminder: !task.reminder } : task
+      )
+    );
+  };
+
   return (
     <div className="container">
       <Header />
-      <Tasks tasks={tasks} />
+      {tasks.length > 0 ? (
+        <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />
+      ) : (
+        "nothing is show"
+      )}
     </div>
   );
 }
